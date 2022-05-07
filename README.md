@@ -24,6 +24,7 @@ yarn global add typescript typescript-language-server eslint prettier
     [ ] eslint
     [ ] prettier
   [ ] Go to definition
+    [ ] Key Map for navigation between items in QuickFix list
   [ ] Quick fix
 [ ] Toggle comments multiple lines
 [ ] Key maps

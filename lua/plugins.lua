@@ -33,10 +33,16 @@ return require('packer').startup(function(use)
 	
 	-- LSP
   use { 'neovim/nvim-lspconfig' }
-	
+  use { 'onsails/lspkind-nvim' }
+  
 	-- Autocomplete
   use { 'hrsh7th/nvim-cmp' } -- Completion Engine
   use { 'hrsh7th/cmp-nvim-lsp' } -- Provide more capabilities to language servers
+  use { 'hrsh7th/cmp-vsnip' }
+  use { 'hrsh7th/cmp-buffer' }
+  use { 'hrsh7th/cmp-path' }
+  use { 'hrsh7th/cmp-calc' }
+  use { 'hrsh7th/cmp-cmdline' }
 	-- Treesitter
 	-- Syntax
 	-- Icons
