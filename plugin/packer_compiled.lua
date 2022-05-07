@@ -44,8 +44,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/hungbui/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/hungbui/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/hungbui/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/hungbui/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/hungbui/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/hung/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/hung/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/hung/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/hung/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/hung/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -72,51 +72,71 @@ _G.packer_plugins = {
   ["better-escape.nvim"] = {
     config = { "require'plugins.better-escape'" },
     loaded = true,
-    path = "/Users/hungbui/.local/share/nvim/site/pack/packer/start/better-escape.nvim",
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/better-escape.nvim",
     url = "https://github.com/max397574/better-escape.nvim"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["ctrlsf.vim"] = {
+    config = { "require'plugins.ctrlsf'" },
+    loaded = true,
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/ctrlsf.vim",
+    url = "https://github.com/dyng/ctrlsf.vim"
+  },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/hungbui/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
     config = { "require'plugins.nvimtree'" },
     loaded = true,
-    path = "/Users/hungbui/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/Users/hungbui/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/hungbui/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["vscode.nvim"] = {
     config = { "require'plugins.vscode'" },
     loaded = true,
-    path = "/Users/hungbui/.local/share/nvim/site/pack/packer/start/vscode.nvim",
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/vscode.nvim",
     url = "https://github.com/Mofiqul/vscode.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: vscode.nvim
-time([[Config for vscode.nvim]], true)
-require'plugins.vscode'
-time([[Config for vscode.nvim]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 require'plugins.nvimtree'
 time([[Config for nvim-tree.lua]], false)
+-- Config for: vscode.nvim
+time([[Config for vscode.nvim]], true)
+require'plugins.vscode'
+time([[Config for vscode.nvim]], false)
 -- Config for: better-escape.nvim
 time([[Config for better-escape.nvim]], true)
 require'plugins.better-escape'
 time([[Config for better-escape.nvim]], false)
+-- Config for: ctrlsf.vim
+time([[Config for ctrlsf.vim]], true)
+require'plugins.ctrlsf'
+time([[Config for ctrlsf.vim]], false)
 if should_profile then save_profiles() end
 
 end)

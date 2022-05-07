@@ -35,6 +35,8 @@ return require('packer').startup(function(use)
   use { 'neovim/nvim-lspconfig' }
 	
 	-- Autocomplete
+  use { 'hrsh7th/nvim-cmp' } -- Completion Engine
+  use { 'hrsh7th/cmp-nvim-lsp' } -- Provide more capabilities to language servers
 	-- Treesitter
 	-- Syntax
 	-- Icons
@@ -52,6 +54,8 @@ return require('packer').startup(function(use)
 	-- Git
 	-- Registers & clipboard
 	-- Move & Search & Replace
+  use { 'dyng/ctrlsf.vim', config = lua_path"ctrlsf" }
+  
 	-- Tmux
 	-- Colorscheme
   use { 'Mofiqul/vscode.nvim',
