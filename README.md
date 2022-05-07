@@ -17,6 +17,31 @@ In the first run of nvim, call command line
 yarn global add typescript typescript-language-server eslint prettier
 ```
 
+# Feature
+
+[ ] LSP
+  [x] ts-server
+    [ ] eslint
+    [ ] prettier
+  [ ] Go to definition
+  [ ] Quick fix
+[ ] Toggle comments multiple lines
+[ ] Key maps
+  [x] Navigation of buffers
+    [x] Jump next/prev
+    [x] Close all buffers except current buffer
+  [ ] Copy-paste into system clipboard
+[ ] Search/Replace
+  [ ] Search text in the whole project
+  [ ] Replace text in the whole project
+[ ] File tree
+  [x] Toggle display of file tree
+  [ ] Icon of file/folder
+[ ] File Opening
+  [ ] File fuzzing
+[ ] Session
+  [ ] Open the last project session
+  
 # Concept
 
 ## Language Server
