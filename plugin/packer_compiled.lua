@@ -105,10 +105,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: better-escape.nvim
-time([[Config for better-escape.nvim]], true)
-require'plugins.better-escape'
-time([[Config for better-escape.nvim]], false)
 -- Config for: vscode.nvim
 time([[Config for vscode.nvim]], true)
 require'plugins.vscode'
@@ -117,6 +113,10 @@ time([[Config for vscode.nvim]], false)
 time([[Config for nvim-tree.lua]], true)
 require'plugins.nvimtree'
 time([[Config for nvim-tree.lua]], false)
+-- Config for: better-escape.nvim
+time([[Config for better-escape.nvim]], true)
+require'plugins.better-escape'
+time([[Config for better-escape.nvim]], false)
 if should_profile then save_profiles() end
 
 end)
