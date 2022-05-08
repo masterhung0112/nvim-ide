@@ -47,7 +47,16 @@ return require('packer').startup(function(use)
 	-- Syntax
 	-- Icons
 	-- Status Line and Bufferline
+  use { 'famiu/feline.nvim', config = lua_path"feline" }
 	-- Telescope
+  use { 'nvim-lua/plenary.nvim' }
+  use { 'nvim-telescope/telescope.nvim', 
+    config = lua_path"telescope",
+  }
+  use { 'nvim-telescope/telescope-fzy-native.nvim' }
+  use { 'cljoly/telescope-repo.nvim' }
+  use { 'nvim-telescope/telescope-dap.nvim' }
+  
 	-- Explorer
 	use { 'kyazdani42/nvim-tree.lua', 
 		config = lua_path"nvimtree", 
@@ -59,8 +68,10 @@ return require('packer').startup(function(use)
 	-- Color
 	-- Git
 	-- Registers & clipboard
+  use { 'AckslD/nvim-neoclip.lua', config = lua_path"nvim-neoclip" }
 	-- Move & Search & Replace
   use { 'dyng/ctrlsf.vim', config = lua_path"ctrlsf" }
+  use { 'ThePrimeagen/harpoon', config = lua_path"harpoon" }
   
 	-- Tmux
 	-- Colorscheme
@@ -70,7 +81,12 @@ return require('packer').startup(function(use)
 
 	-- Tags
 	-- Debugger
+  use { 'mfussenegger/nvim-dap', config = lua_path"nvim-dap" }
+  use { 'rcarriga/nvim-dap-ui', config = lua_path"nvim-dap-ui" }
+  use { 'theHamsta/nvim-dap-virtual-text', config = lua_path"nvim-dap-virtual-text" } 
+  
 	-- General Plugins
+  use { 'rcarriga/nvim-notify', config = lua_path"nvim-notify" }
   use { 'max397574/better-escape.nvim',
 		config = lua_path"better-escape"
     --config = lua_path"better-escape",

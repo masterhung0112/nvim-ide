@@ -1,5 +1,6 @@
 require('plugins')
 require('settings')
+require('settings.color')
 require('settings.keymap')
 require('settings.completion')
 require('lsp')

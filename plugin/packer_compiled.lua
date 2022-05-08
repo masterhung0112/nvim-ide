@@ -111,6 +111,18 @@ _G.packer_plugins = {
     path = "/home/hung/.local/share/nvim/site/pack/packer/start/ctrlsf.vim",
     url = "https://github.com/dyng/ctrlsf.vim"
   },
+  ["feline.nvim"] = {
+    config = { "require'plugins.feline'" },
+    loaded = true,
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/feline.nvim",
+    url = "https://github.com/famiu/feline.nvim"
+  },
+  harpoon = {
+    config = { "require'plugins.harpoon'" },
+    loaded = true,
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
+  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/home/hung/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
@@ -121,10 +133,40 @@ _G.packer_plugins = {
     path = "/home/hung/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-dap"] = {
+    config = { "require'plugins.nvim-dap'" },
+    loaded = true,
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-dap-ui"] = {
+    config = { "require'plugins.nvim-dap-ui'" },
+    loaded = true,
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
+    url = "https://github.com/rcarriga/nvim-dap-ui"
+  },
+  ["nvim-dap-virtual-text"] = {
+    config = { "require'plugins.nvim-dap-virtual-text'" },
+    loaded = true,
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
+    url = "https://github.com/theHamsta/nvim-dap-virtual-text"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/hung/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-neoclip.lua"] = {
+    config = { "require'plugins.nvim-neoclip'" },
+    loaded = true,
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/nvim-neoclip.lua",
+    url = "https://github.com/AckslD/nvim-neoclip.lua"
+  },
+  ["nvim-notify"] = {
+    config = { "require'plugins.nvim-notify'" },
+    loaded = true,
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/nvim-notify",
+    url = "https://github.com/rcarriga/nvim-notify"
   },
   ["nvim-tree.lua"] = {
     config = { "require'plugins.nvimtree'" },
@@ -142,6 +184,32 @@ _G.packer_plugins = {
     path = "/home/hung/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["telescope-dap.nvim"] = {
+    loaded = true,
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
+    url = "https://github.com/nvim-telescope/telescope-dap.nvim"
+  },
+  ["telescope-fzy-native.nvim"] = {
+    loaded = true,
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/telescope-fzy-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzy-native.nvim"
+  },
+  ["telescope-repo.nvim"] = {
+    loaded = true,
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/telescope-repo.nvim",
+    url = "https://github.com/cljoly/telescope-repo.nvim"
+  },
+  ["telescope.nvim"] = {
+    config = { "require'plugins.telescope'" },
+    loaded = true,
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
   ["vscode.nvim"] = {
     config = { "require'plugins.vscode'" },
     loaded = true,
@@ -155,14 +223,46 @@ time([[Defining packer_plugins]], false)
 time([[Config for nvim-tree.lua]], true)
 require'plugins.nvimtree'
 time([[Config for nvim-tree.lua]], false)
--- Config for: vscode.nvim
-time([[Config for vscode.nvim]], true)
-require'plugins.vscode'
-time([[Config for vscode.nvim]], false)
+-- Config for: nvim-dap
+time([[Config for nvim-dap]], true)
+require'plugins.nvim-dap'
+time([[Config for nvim-dap]], false)
+-- Config for: nvim-dap-ui
+time([[Config for nvim-dap-ui]], true)
+require'plugins.nvim-dap-ui'
+time([[Config for nvim-dap-ui]], false)
+-- Config for: nvim-dap-virtual-text
+time([[Config for nvim-dap-virtual-text]], true)
+require'plugins.nvim-dap-virtual-text'
+time([[Config for nvim-dap-virtual-text]], false)
 -- Config for: better-escape.nvim
 time([[Config for better-escape.nvim]], true)
 require'plugins.better-escape'
 time([[Config for better-escape.nvim]], false)
+-- Config for: nvim-notify
+time([[Config for nvim-notify]], true)
+require'plugins.nvim-notify'
+time([[Config for nvim-notify]], false)
+-- Config for: vscode.nvim
+time([[Config for vscode.nvim]], true)
+require'plugins.vscode'
+time([[Config for vscode.nvim]], false)
+-- Config for: feline.nvim
+time([[Config for feline.nvim]], true)
+require'plugins.feline'
+time([[Config for feline.nvim]], false)
+-- Config for: nvim-neoclip.lua
+time([[Config for nvim-neoclip.lua]], true)
+require'plugins.nvim-neoclip'
+time([[Config for nvim-neoclip.lua]], false)
+-- Config for: harpoon
+time([[Config for harpoon]], true)
+require'plugins.harpoon'
+time([[Config for harpoon]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require'plugins.telescope'
+time([[Config for telescope.nvim]], false)
 -- Config for: ctrlsf.vim
 time([[Config for ctrlsf.vim]], true)
 require'plugins.ctrlsf'
