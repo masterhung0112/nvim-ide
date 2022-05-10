@@ -43,7 +43,12 @@ return require('packer').startup(function(use)
   use { 'hrsh7th/cmp-path' }
   use { 'hrsh7th/cmp-calc' }
   use { 'hrsh7th/cmp-cmdline' }
+  -- Formatting
+  use { 'sbdchd/neoformat', config = lua_path"neoformat" }
+  
 	-- Treesitter
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = lua_path"treesitter" }
+
 	-- Syntax
 	-- Icons
 	-- Status Line and Bufferline
@@ -56,8 +61,10 @@ return require('packer').startup(function(use)
   use { 'nvim-telescope/telescope-fzy-native.nvim' }
   use { 'cljoly/telescope-repo.nvim' }
   use { 'nvim-telescope/telescope-dap.nvim' }
+  use { 'nvim-Telescope/telescope-project.nvim' }
   
 	-- Explorer
+  use { 'kyazdani42/nvim-web-devicons' }
 	use { 'kyazdani42/nvim-tree.lua', 
 		config = lua_path"nvimtree", 
 		requires = {
@@ -68,7 +75,9 @@ return require('packer').startup(function(use)
 	-- Color
 	-- Git
 	-- Registers & clipboard
+  use "tversteeg/registers.nvim"
   use { 'AckslD/nvim-neoclip.lua', config = lua_path"nvim-neoclip" }
+
 	-- Move & Search & Replace
   use { 'dyng/ctrlsf.vim', config = lua_path"ctrlsf" }
   use { 'ThePrimeagen/harpoon', config = lua_path"harpoon" }

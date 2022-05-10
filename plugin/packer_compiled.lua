@@ -128,6 +128,12 @@ _G.packer_plugins = {
     path = "/home/hung/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
     url = "https://github.com/onsails/lspkind-nvim"
   },
+  neoformat = {
+    config = { "require'plugins.neoformat'" },
+    loaded = true,
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/neoformat",
+    url = "https://github.com/sbdchd/neoformat"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/hung/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -174,6 +180,12 @@ _G.packer_plugins = {
     path = "/home/hung/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
+  ["nvim-treesitter"] = {
+    config = { "require'plugins.treesitter'" },
+    loaded = true,
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/hung/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -189,6 +201,11 @@ _G.packer_plugins = {
     path = "/home/hung/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["registers.nvim"] = {
+    loaded = true,
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/registers.nvim",
+    url = "https://github.com/tversteeg/registers.nvim"
+  },
   ["telescope-dap.nvim"] = {
     loaded = true,
     path = "/home/hung/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
@@ -198,6 +215,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/hung/.local/share/nvim/site/pack/packer/start/telescope-fzy-native.nvim",
     url = "https://github.com/nvim-telescope/telescope-fzy-native.nvim"
+  },
+  ["telescope-project.nvim"] = {
+    loaded = true,
+    path = "/home/hung/.local/share/nvim/site/pack/packer/start/telescope-project.nvim",
+    url = "https://github.com/nvim-Telescope/telescope-project.nvim"
   },
   ["telescope-repo.nvim"] = {
     loaded = true,
@@ -219,54 +241,62 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-require'plugins.nvimtree'
-time([[Config for nvim-tree.lua]], false)
--- Config for: nvim-dap
-time([[Config for nvim-dap]], true)
-require'plugins.nvim-dap'
-time([[Config for nvim-dap]], false)
--- Config for: nvim-dap-ui
-time([[Config for nvim-dap-ui]], true)
-require'plugins.nvim-dap-ui'
-time([[Config for nvim-dap-ui]], false)
--- Config for: nvim-dap-virtual-text
-time([[Config for nvim-dap-virtual-text]], true)
-require'plugins.nvim-dap-virtual-text'
-time([[Config for nvim-dap-virtual-text]], false)
--- Config for: better-escape.nvim
-time([[Config for better-escape.nvim]], true)
-require'plugins.better-escape'
-time([[Config for better-escape.nvim]], false)
 -- Config for: nvim-notify
 time([[Config for nvim-notify]], true)
 require'plugins.nvim-notify'
 time([[Config for nvim-notify]], false)
--- Config for: vscode.nvim
-time([[Config for vscode.nvim]], true)
-require'plugins.vscode'
-time([[Config for vscode.nvim]], false)
--- Config for: feline.nvim
-time([[Config for feline.nvim]], true)
-require'plugins.feline'
-time([[Config for feline.nvim]], false)
--- Config for: nvim-neoclip.lua
-time([[Config for nvim-neoclip.lua]], true)
-require'plugins.nvim-neoclip'
-time([[Config for nvim-neoclip.lua]], false)
--- Config for: harpoon
-time([[Config for harpoon]], true)
-require'plugins.harpoon'
-time([[Config for harpoon]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-require'plugins.telescope'
-time([[Config for telescope.nvim]], false)
+-- Config for: nvim-dap
+time([[Config for nvim-dap]], true)
+require'plugins.nvim-dap'
+time([[Config for nvim-dap]], false)
 -- Config for: ctrlsf.vim
 time([[Config for ctrlsf.vim]], true)
 require'plugins.ctrlsf'
 time([[Config for ctrlsf.vim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require'plugins.nvimtree'
+time([[Config for nvim-tree.lua]], false)
+-- Config for: nvim-dap-ui
+time([[Config for nvim-dap-ui]], true)
+require'plugins.nvim-dap-ui'
+time([[Config for nvim-dap-ui]], false)
+-- Config for: feline.nvim
+time([[Config for feline.nvim]], true)
+require'plugins.feline'
+time([[Config for feline.nvim]], false)
+-- Config for: nvim-dap-virtual-text
+time([[Config for nvim-dap-virtual-text]], true)
+require'plugins.nvim-dap-virtual-text'
+time([[Config for nvim-dap-virtual-text]], false)
+-- Config for: harpoon
+time([[Config for harpoon]], true)
+require'plugins.harpoon'
+time([[Config for harpoon]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require'plugins.treesitter'
+time([[Config for nvim-treesitter]], false)
+-- Config for: vscode.nvim
+time([[Config for vscode.nvim]], true)
+require'plugins.vscode'
+time([[Config for vscode.nvim]], false)
+-- Config for: better-escape.nvim
+time([[Config for better-escape.nvim]], true)
+require'plugins.better-escape'
+time([[Config for better-escape.nvim]], false)
+-- Config for: nvim-neoclip.lua
+time([[Config for nvim-neoclip.lua]], true)
+require'plugins.nvim-neoclip'
+time([[Config for nvim-neoclip.lua]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require'plugins.telescope'
+time([[Config for telescope.nvim]], false)
+-- Config for: neoformat
+time([[Config for neoformat]], true)
+require'plugins.neoformat'
+time([[Config for neoformat]], false)
 if should_profile then save_profiles() end
 
 end)

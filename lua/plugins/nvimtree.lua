@@ -1,10 +1,10 @@
 vim.g.nvim_tree_auto_ignore_ft = 'startify'
-vim.g.nvim_tree_icons = {
-  default = '',
-  symlink = '',
-  git = {unstaged = "", staged = "", unmerged = "", renamed = "", untracked = "", deleted = "✖", ignored = ""},
-  folder = {default = "", open = "", empty = "", empty_open = "", symlink = ""}
-}
+-- vim.g.nvim_tree_icons = {
+--   default = '',
+--   symlink = '',
+--   git = {unstaged = "", staged = "", unmerged = "", renamed = "", untracked = "", deleted = "✖", ignored = ""},
+--   folder = {default = "", open = "", empty = "", empty_open = "", symlink = ""}
+-- }
 require'nvim-tree'.setup {
   disable_netrw = false, -- disable netrw completely
   hijack_cursor = false, -- hijack the cursor in the tree to put it at the start of the filename
@@ -54,7 +54,27 @@ require'nvim-tree'.setup {
       -- list of mappings to set on the tree manually
       list = {}
     }
-  }
+  },
+  -- renderer = {
+  --   indent_markers = {
+  --     enable = false,
+  --     icons = {
+  --       corner = "└ ",
+  --       edge = "│ ",
+  --       none = "  ",
+  --     },
+  --   },
+  --   icons = {
+  --     webdev_colors = true,
+  --     git_placement = "before",
+  --   }
+  -- },
 }
+
+-- automatically close the tab/vim when nvim-tree is the last window in the tab
+vim.cmd([[
+autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
+]])
+
 vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 -- vim.api.nvim_set_keymap('n', '<leader>r', ':NvimTreeRefresh', {noremap = true, silent = true})

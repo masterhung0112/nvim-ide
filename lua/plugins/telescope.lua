@@ -16,11 +16,13 @@ telescope.load_extension('neoclip')
 telescope.load_extension('notify')
 telescope.load_extension('harpoon')
 -- telescope.load_extension('dap')
+telescope.load_extension('project')
 
 
-vim.api.nvim_set_keymap('n', '<leader>r', ":lua require('telescope.builtin').live_grep()<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>#', ":lua require('telescope.builtin').grep_string()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>ff', ":lua require('telescope.builtin').find_files()<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>bb', ":lua require('telescope.builtin').buffers()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>r', ":lua require('telescope.builtin').live_grep()<CR>", {noremap = true, silent = true}) -- search for a string in working directory
+vim.api.nvim_set_keymap('n', '<leader>#', ":lua require('telescope.builtin').grep_string()<CR>", {noremap = true, silent = true}) -- search for string under your cursor
 vim.api.nvim_set_keymap('n', '<leader>h', ":lua require('harpoon.mark').add_file()<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>m', ":Telescope harpoon marks<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>mm', ":lua require('harpoon.ui').toggle_quick_menu()<CR>", {noremap = true, silent = true})
@@ -37,4 +39,11 @@ vim.api.nvim_set_keymap('n', '<leader>gc', ':Octo issue create<CR>', {noremap = 
 vim.api.nvim_set_keymap('n', '<leader>i', ':Octo issue list<CR>', {noremap = true, silent = false})
 vim.api.nvim_set_keymap('n', '<leader>y', ':Telescope neoclip<CR>', {noremap = true, silent = false})
 vim.api.nvim_set_keymap('n', '<leader>ll', ":lua require('telescope.builtin').grep_string({ search = vim.fn.input('GREP -> ') })<CR>", {noremap = true, silent = true})
+
+vim.api.nvim_set_keymap(
+    'n',
+    '<C-p>',
+    ":lua require'telescope'.extensions.project.project{}<CR>",
+    {noremap = true, silent = true}
+)
 
