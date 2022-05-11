@@ -64,7 +64,6 @@ return require('packer').startup(function(use)
   use { 'nvim-Telescope/telescope-project.nvim' }
   
 	-- Explorer
-  use { 'kyazdani42/nvim-web-devicons' }
 	use { 'kyazdani42/nvim-tree.lua', 
 		config = lua_path"nvimtree", 
 		requires = {
@@ -72,8 +71,15 @@ return require('packer').startup(function(use)
 		}
 	}
 
+  -- Session
+  use { 'rmagatti/auto-session',
+    config = lua_path"auto-session" }
+
 	-- Color
 	-- Git
+  use { 'kdheepak/lazygit.nvim' }
+  use { 'akinsho/git-conflict.nvim', config = lua_path"git-conflict" }
+
 	-- Registers & clipboard
   use "tversteeg/registers.nvim"
   use { 'AckslD/nvim-neoclip.lua', config = lua_path"nvim-neoclip" }
@@ -88,6 +94,11 @@ return require('packer').startup(function(use)
     config = lua_path"vscode"
   }
 
+  -- Terminal
+  use { 'akinsho/toggleterm.nvim', tag = 'v1.*',
+    config = lua_path"toggleterm"
+  }
+
 	-- Tags
 	-- Debugger
   use { 'mfussenegger/nvim-dap', config = lua_path"nvim-dap" }
@@ -100,5 +111,6 @@ return require('packer').startup(function(use)
 		config = lua_path"better-escape"
     --config = lua_path"better-escape",
   }
+  use { 'airblade/vim-rooter', config = lua_path"vim-rooter" }
 
 end)

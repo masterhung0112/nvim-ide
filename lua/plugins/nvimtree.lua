@@ -13,8 +13,8 @@ require'nvim-tree'.setup {
   ignore_ft_on_setup = {}, -- will not open on setup if the filetype is in this list
   open_on_tab = false, -- opens the tree when changing/opening a new tab if the tree wasn't previously opened
   hijack_cursor = false, -- Hijack the cursor in the tree to put it at the start of the filename
-  update_cwd = false, -- updates the root directory of the tree on `DirChange` (when you run `:cd` usually)
-  --sorted_by = "name",
+  update_cwd = true, -- updates the root directory of the tree on `DirChange` (when you run `:cd` usually)
+  sort_by = "name",
   -- show lsp diagnostics in the signcolumn
   diagnostics = {
     enable = false,
@@ -28,7 +28,7 @@ require'nvim-tree'.setup {
   -- update the focused file on `BufEnter`, un-collapses the folders recursively until it finds the file
   update_focused_file = {
     -- enables the feature
-    enable      = false,
+    enable      = true,
     -- update the root directory of the tree to the one of the folder containing the file if the file is not under the current root directory
     -- only relevant when `update_focused_file.enable` is true
     update_cwd  = false,
@@ -55,20 +55,20 @@ require'nvim-tree'.setup {
       list = {}
     }
   },
-  -- renderer = {
-  --   indent_markers = {
-  --     enable = false,
-  --     icons = {
-  --       corner = "└ ",
-  --       edge = "│ ",
-  --       none = "  ",
-  --     },
-  --   },
-  --   icons = {
-  --     webdev_colors = true,
-  --     git_placement = "before",
-  --   }
-  -- },
+  renderer = {
+     indent_markers = {
+       enable = false,
+       icons = {
+        corner = "└ ",
+        edge = "│ ",
+         none = "  ",
+       },
+     },
+     icons = {
+       webdev_colors = true,
+       git_placement = "before",
+     }
+   },
 }
 
 -- automatically close the tab/vim when nvim-tree is the last window in the tab
