@@ -104,6 +104,9 @@ return require('packer').startup(function(use)
   use { 'mfussenegger/nvim-dap', config = lua_path"nvim-dap" }
   use { 'rcarriga/nvim-dap-ui', config = lua_path"nvim-dap-ui" }
   use { 'theHamsta/nvim-dap-virtual-text', config = lua_path"nvim-dap-virtual-text" } 
+
+  -- Flutter
+  use { 'akinsho/flutter-tools.nvim' }
   
 	-- General Plugins
   use { 'rcarriga/nvim-notify', config = lua_path"nvim-notify" }
