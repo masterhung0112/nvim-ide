@@ -47,7 +47,7 @@ return require('packer').startup(function(use)
   use { 'sbdchd/neoformat', config = lua_path"neoformat" }
   
 	-- Treesitter
-  use { 'nvim-treesitter/nvim-treesitter', tag = 'v0.20.6', run = ':TSUpdate', config = lua_path"treesitter" }
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = lua_path"treesitter" }
 
 	-- Syntax
 	-- Icons
