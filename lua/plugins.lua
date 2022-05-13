@@ -47,7 +47,7 @@ return require('packer').startup(function(use)
   use { 'sbdchd/neoformat', config = lua_path"neoformat" }
   
 	-- Treesitter
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = lua_path"treesitter" }
+  use { 'nvim-treesitter/nvim-treesitter', tag = 'v0.20.6', run = ':TSUpdate', config = lua_path"treesitter" }
 
 	-- Syntax
 	-- Icons
@@ -106,7 +106,7 @@ return require('packer').startup(function(use)
   use { 'theHamsta/nvim-dap-virtual-text', config = lua_path"nvim-dap-virtual-text" } 
 
   -- Flutter
-  use { 'akinsho/flutter-tools.nvim' }
+  use { 'akinsho/flutter-tools.nvim', config = lua_path"flutter-tools" }
   
 	-- General Plugins
   use { 'rcarriga/nvim-notify', config = lua_path"nvim-notify" }

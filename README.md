@@ -47,3 +47,14 @@ yarn global add typescript typescript-language-server eslint prettier
 
 ## Language Server
 NeoVim has LSP client that will connect to language server to get the autocomplete. Depending on the capabilities of client, the server provides the set of results.
+
+# Issue
+
+## phpdoc complain about arm64 for Apple silicon
+
+```h
+nvm install 14
+nvm use 14
+npm i -g npm
+nvim +"TSInstall phpdoc"
+```
