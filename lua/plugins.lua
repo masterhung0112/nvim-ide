@@ -50,6 +50,7 @@ return require('packer').startup(function(use)
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = lua_path"treesitter" }
 
 	-- Syntax
+  use { 'windwp/nvim-autopairs', config = lua_path"nvim-autopairs" }
 	-- Icons
 	-- Status Line and Bufferline
   use { 'famiu/feline.nvim', config = lua_path"feline" }

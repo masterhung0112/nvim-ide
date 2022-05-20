@@ -157,6 +157,12 @@ _G.packer_plugins = {
     path = "/Users/hungbui/.local/share/nvim/site/pack/packer/start/neoformat",
     url = "https://github.com/sbdchd/neoformat"
   },
+  ["nvim-autopairs"] = {
+    config = { "require'plugins.nvim-autopairs'" },
+    loaded = true,
+    path = "/Users/hungbui/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/hungbui/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -276,18 +282,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-dap
-time([[Config for nvim-dap]], true)
-require'plugins.nvim-dap'
-time([[Config for nvim-dap]], false)
--- Config for: nvim-dap-ui
-time([[Config for nvim-dap-ui]], true)
-require'plugins.nvim-dap-ui'
-time([[Config for nvim-dap-ui]], false)
--- Config for: ctrlsf.vim
-time([[Config for ctrlsf.vim]], true)
-require'plugins.ctrlsf'
-time([[Config for ctrlsf.vim]], false)
 -- Config for: nvim-dap-virtual-text
 time([[Config for nvim-dap-virtual-text]], true)
 require'plugins.nvim-dap-virtual-text'
@@ -312,10 +306,10 @@ time([[Config for auto-session]], false)
 time([[Config for git-conflict.nvim]], true)
 require'plugins.git-conflict'
 time([[Config for git-conflict.nvim]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-require'plugins.telescope'
-time([[Config for telescope.nvim]], false)
+-- Config for: nvim-notify
+time([[Config for nvim-notify]], true)
+require'plugins.nvim-notify'
+time([[Config for nvim-notify]], false)
 -- Config for: better-escape.nvim
 time([[Config for better-escape.nvim]], true)
 require'plugins.better-escape'
@@ -340,6 +334,14 @@ time([[Config for vscode.nvim]], false)
 time([[Config for neoformat]], true)
 require'plugins.neoformat'
 time([[Config for neoformat]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+require'plugins.nvim-autopairs'
+time([[Config for nvim-autopairs]], false)
+-- Config for: nvim-dap
+time([[Config for nvim-dap]], true)
+require'plugins.nvim-dap'
+time([[Config for nvim-dap]], false)
 -- Config for: nvim-treesitter
 time([[Config for nvim-treesitter]], true)
 require'plugins.treesitter'
@@ -348,10 +350,18 @@ time([[Config for nvim-treesitter]], false)
 time([[Config for nvim-tree.lua]], true)
 require'plugins.nvimtree'
 time([[Config for nvim-tree.lua]], false)
--- Config for: nvim-notify
-time([[Config for nvim-notify]], true)
-require'plugins.nvim-notify'
-time([[Config for nvim-notify]], false)
+-- Config for: nvim-dap-ui
+time([[Config for nvim-dap-ui]], true)
+require'plugins.nvim-dap-ui'
+time([[Config for nvim-dap-ui]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+require'plugins.telescope'
+time([[Config for telescope.nvim]], false)
+-- Config for: ctrlsf.vim
+time([[Config for ctrlsf.vim]], true)
+require'plugins.ctrlsf'
+time([[Config for ctrlsf.vim]], false)
 if should_profile then save_profiles() end
 
 end)
