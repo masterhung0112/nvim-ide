@@ -6,7 +6,7 @@ vim.api.nvim_set_keymap('n', '<leader>bda', ':%bd|e#<CR>', {noremap=false, silen
 vim.api.nvim_set_keymap('n', '<leader>bn', ':bn<CR>', {noremap = false, silent = false})
 vim.api.nvim_set_keymap('n', '<leader>bp', ':bp<CR>', {noremap = false, silent = false})
 vim.api.nvim_set_keymap('n', '<leader>bg', ':ls<CR>:b<Space>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap('n', '<leader>bw', ':b#|bd#<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>bw', ':bp<bar>sp<bar>bn<bar>bd<CR>', {noremap = true, silent = true})
 
 -- Window
 vim.api.nvim_set_keymap('n', '<c-h>', '<c-w>h', {noremap = false, silent = false})
