@@ -111,6 +111,11 @@ _G.packer_plugins = {
     path = "/Users/hungbui/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/Users/hungbui/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
   ["ctrlsf.vim"] = {
     config = { "require'plugins.ctrlsf'" },
     loaded = true,
@@ -129,6 +134,11 @@ _G.packer_plugins = {
     path = "/Users/hungbui/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
     url = "https://github.com/akinsho/flutter-tools.nvim"
   },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/Users/hungbui/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
+  },
   ["git-conflict.nvim"] = {
     config = { "require'plugins.git-conflict'" },
     loaded = true,
@@ -142,6 +152,7 @@ _G.packer_plugins = {
     url = "https://github.com/ThePrimeagen/harpoon"
   },
   ["lazygit.nvim"] = {
+    config = { "require'plugins.lazygit'" },
     loaded = true,
     path = "/Users/hungbui/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
     url = "https://github.com/kdheepak/lazygit.nvim"
@@ -282,34 +293,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-dap-virtual-text
-time([[Config for nvim-dap-virtual-text]], true)
-require'plugins.nvim-dap-virtual-text'
-time([[Config for nvim-dap-virtual-text]], false)
--- Config for: feline.nvim
-time([[Config for feline.nvim]], true)
-require'plugins.feline'
-time([[Config for feline.nvim]], false)
--- Config for: flutter-tools.nvim
-time([[Config for flutter-tools.nvim]], true)
-require'plugins.flutter-tools'
-time([[Config for flutter-tools.nvim]], false)
--- Config for: nvim-neoclip.lua
-time([[Config for nvim-neoclip.lua]], true)
-require'plugins.nvim-neoclip'
-time([[Config for nvim-neoclip.lua]], false)
--- Config for: auto-session
-time([[Config for auto-session]], true)
-require'plugins.auto-session'
-time([[Config for auto-session]], false)
 -- Config for: git-conflict.nvim
 time([[Config for git-conflict.nvim]], true)
 require'plugins.git-conflict'
 time([[Config for git-conflict.nvim]], false)
--- Config for: nvim-notify
-time([[Config for nvim-notify]], true)
-require'plugins.nvim-notify'
-time([[Config for nvim-notify]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+require'plugins.nvim-autopairs'
+time([[Config for nvim-autopairs]], false)
 -- Config for: better-escape.nvim
 time([[Config for better-escape.nvim]], true)
 require'plugins.better-escape'
@@ -318,42 +309,34 @@ time([[Config for better-escape.nvim]], false)
 time([[Config for harpoon]], true)
 require'plugins.harpoon'
 time([[Config for harpoon]], false)
--- Config for: toggleterm.nvim
-time([[Config for toggleterm.nvim]], true)
-require'plugins.toggleterm'
-time([[Config for toggleterm.nvim]], false)
--- Config for: vim-rooter
-time([[Config for vim-rooter]], true)
-require'plugins.vim-rooter'
-time([[Config for vim-rooter]], false)
--- Config for: vscode.nvim
-time([[Config for vscode.nvim]], true)
-require'plugins.vscode'
-time([[Config for vscode.nvim]], false)
--- Config for: neoformat
-time([[Config for neoformat]], true)
-require'plugins.neoformat'
-time([[Config for neoformat]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-require'plugins.nvim-autopairs'
-time([[Config for nvim-autopairs]], false)
+-- Config for: lazygit.nvim
+time([[Config for lazygit.nvim]], true)
+require'plugins.lazygit'
+time([[Config for lazygit.nvim]], false)
 -- Config for: nvim-dap
 time([[Config for nvim-dap]], true)
 require'plugins.nvim-dap'
 time([[Config for nvim-dap]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-require'plugins.treesitter'
-time([[Config for nvim-treesitter]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-require'plugins.nvimtree'
-time([[Config for nvim-tree.lua]], false)
 -- Config for: nvim-dap-ui
 time([[Config for nvim-dap-ui]], true)
 require'plugins.nvim-dap-ui'
 time([[Config for nvim-dap-ui]], false)
+-- Config for: nvim-dap-virtual-text
+time([[Config for nvim-dap-virtual-text]], true)
+require'plugins.nvim-dap-virtual-text'
+time([[Config for nvim-dap-virtual-text]], false)
+-- Config for: nvim-neoclip.lua
+time([[Config for nvim-neoclip.lua]], true)
+require'plugins.nvim-neoclip'
+time([[Config for nvim-neoclip.lua]], false)
+-- Config for: auto-session
+time([[Config for auto-session]], true)
+require'plugins.auto-session'
+time([[Config for auto-session]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+require'plugins.treesitter'
+time([[Config for nvim-treesitter]], false)
 -- Config for: telescope.nvim
 time([[Config for telescope.nvim]], true)
 require'plugins.telescope'
@@ -362,6 +345,38 @@ time([[Config for telescope.nvim]], false)
 time([[Config for ctrlsf.vim]], true)
 require'plugins.ctrlsf'
 time([[Config for ctrlsf.vim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+require'plugins.nvimtree'
+time([[Config for nvim-tree.lua]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+require'plugins.toggleterm'
+time([[Config for toggleterm.nvim]], false)
+-- Config for: feline.nvim
+time([[Config for feline.nvim]], true)
+require'plugins.feline'
+time([[Config for feline.nvim]], false)
+-- Config for: nvim-notify
+time([[Config for nvim-notify]], true)
+require'plugins.nvim-notify'
+time([[Config for nvim-notify]], false)
+-- Config for: vim-rooter
+time([[Config for vim-rooter]], true)
+require'plugins.vim-rooter'
+time([[Config for vim-rooter]], false)
+-- Config for: flutter-tools.nvim
+time([[Config for flutter-tools.nvim]], true)
+require'plugins.flutter-tools'
+time([[Config for flutter-tools.nvim]], false)
+-- Config for: neoformat
+time([[Config for neoformat]], true)
+require'plugins.neoformat'
+time([[Config for neoformat]], false)
+-- Config for: vscode.nvim
+time([[Config for vscode.nvim]], true)
+require'plugins.vscode'
+time([[Config for vscode.nvim]], false)
 if should_profile then save_profiles() end
 
 end)

@@ -43,6 +43,10 @@ return require('packer').startup(function(use)
   use { 'hrsh7th/cmp-path' }
   use { 'hrsh7th/cmp-calc' }
   use { 'hrsh7th/cmp-cmdline' }
+  use { 'saadparwaiz1/cmp_luasnip' }
+  use { 'rafamadriz/friendly-snippets' }
+
+
   -- Formatting
   use { 'sbdchd/neoformat', config = lua_path"neoformat" }
   
@@ -78,7 +82,7 @@ return require('packer').startup(function(use)
 
 	-- Color
 	-- Git
-  use { 'kdheepak/lazygit.nvim' }
+  use { 'kdheepak/lazygit.nvim', config = lua_path"lazygit" }
   use { 'akinsho/git-conflict.nvim', config = lua_path"git-conflict" }
 
 	-- Registers & clipboard
