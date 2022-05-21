@@ -77,8 +77,8 @@ return require('packer').startup(function(use)
 	}
 
   -- Session
-  use { 'rmagatti/auto-session',
-    config = lua_path"auto-session" }
+  use { 'rmagatti/auto-session', config = lua_path"auto-session" }
+  use { 'rmagatti/session-lens', config = lua_path"session-lens" }
 
 	-- Color
 	-- Git
