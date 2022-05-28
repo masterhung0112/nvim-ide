@@ -1,4 +1,6 @@
 require('nvim-autopairs').setup{
-  map_cr = false,
+  check_ts = true,
+  map_cr = true,
+  disable_filetype = { "TelescopePrompt" , "vim" },
 }
 

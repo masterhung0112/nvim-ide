@@ -39,6 +39,7 @@ return require('packer').startup(function(use)
   use { 'hrsh7th/nvim-cmp' } -- Completion Engine
   use { 'hrsh7th/cmp-nvim-lsp' } -- Provide more capabilities to language servers
   use { 'hrsh7th/cmp-vsnip' }
+  use { 'hrsh7th/vim-vsnip' }
   use { 'hrsh7th/cmp-buffer' }
   use { 'hrsh7th/cmp-path' }
   use { 'hrsh7th/cmp-calc' }
@@ -46,6 +47,7 @@ return require('packer').startup(function(use)
   use { 'saadparwaiz1/cmp_luasnip' }
   use { 'rafamadriz/friendly-snippets' }
 
+  use { 'L3MON4D3/LuaSnip' }
 
   -- Formatting
   use { 'sbdchd/neoformat', config = lua_path"neoformat" }
