@@ -16,7 +16,7 @@ local lspkind = require'lspkind'
 cmp.setup({
   snippet = {
     expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` user.
+      -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` user.
     end,
   },
   mapping = {
