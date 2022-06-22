@@ -14,6 +14,13 @@ local cmp = require'cmp'
 local lspkind = require'lspkind'
 
 cmp.setup({
+  -- Do not auto-import for property of a field
+  -- Ref: https://github.com/hrsh7th/nvim-cmp/issues/948
+  confirmation = {
+    get_commit_characters = function(commit_characters)
+      return {}
+    end
+  },
   snippet = {
     expand = function(args)
       -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` user.
